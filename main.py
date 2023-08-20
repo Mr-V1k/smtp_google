@@ -1,10 +1,11 @@
 import smtplib
+from datetime import datetime
 from email.mime.text import MIMEText
 
 sender = ""
 recipients = "[]"
 
-subject = "Subject goes here"
+subject = f"Update for tasks dated { datetime.now() }"
 
 with open("body.txt", 'r') as bodyFile:
     body = bodyFile.read()
